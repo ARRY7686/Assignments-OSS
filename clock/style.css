@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes rotateHour {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+@keyframes rotateMinute {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+@keyframes rotateSecond {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.hour-hand {
+    animation: rotateHour 43200s linear infinite; /* 12 hours in seconds */
+    transform-origin: bottom;
+}
+.minute-hand {
+    animation: rotateMinute 3600s linear infinite; /* 60 minutes in seconds */
+    transform-origin: bottom;
+}
+.second-hand {
+    animation: rotateSecond 60s linear infinite; /* 60 seconds */
+    transform-origin: bottom;
+}
